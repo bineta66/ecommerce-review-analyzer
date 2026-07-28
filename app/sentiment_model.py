@@ -12,29 +12,28 @@ sentiment_classifier = None
 
 
 
-# Fonction qui charge le modèle
 def get_sentiment_model():
 
     global sentiment_classifier
 
-
-    # Vérifie si le modèle est déjà chargé
     if sentiment_classifier is None:
 
-        print("Chargement du modèle sentiment...")
+        try:
+            print("Chargement du modèle sentiment...")
 
+            sentiment_classifier = pipeline(
+                task="sentiment-analysis",
+                model=SENTIMENT_MODEL
+            )
 
-        # Création du pipeline Hugging Face
-        sentiment_classifier = pipeline(
+            print("Modèle sentiment prêt")
 
-            task="sentiment-analysis",
+        except Exception as e:
 
-            model=SENTIMENT_MODEL
+            print(
+                f"Erreur chargement modèle : {e}"
+            )
 
-        )
-
-
-        print("Modèle sentiment prêt")
-
+            raise e
 
     return sentiment_classifier
