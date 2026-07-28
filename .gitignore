@@ -1,3 +1,26 @@
-.env
+# Environnement Python
 .venv/
+venv/
+env/
+
+# Variables secrètes
+.env
+
+# Cache Python
 __pycache__/
+*.pyc
+
+# Cache Hugging Face
+.cache/
+.cache/huggingface/
+
+# Modèles IA téléchargés
+models/
+*.bin
+*.safetensors
+
+# Logs
+*.log
+
+# OS
+.DS_Store
