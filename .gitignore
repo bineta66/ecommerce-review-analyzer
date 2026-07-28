@@ -1,34 +1,3 @@
-# Environnement virtuel
-.venv/
-venv/
-env/
-
-# Variables d'environnement
 .env
-
-# Python cache
+.venv/
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Tests
-.pytest_cache/
-
-# Logs
-*.log
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Modèles Hugging Face téléchargés
-.cache/
-huggingface/
-models/
-
-# Système
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
